@@ -19,7 +19,13 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<link rel="stylesheet" type="text/css" href="styles.css">
 	-->
   </head>
-  
+   <script src="js/vue/vue.js"></script>
+    <script type="text/javascript">
+    	var  web = new Vue(){
+    		
+    	};
+    
+    </script>
   <body>
    adfasd <br>
    <a href="page/helloworld">hello world</a>
