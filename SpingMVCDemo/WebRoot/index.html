@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Vue.js github commits example</title>
+    <style>
+      #demo {
+        font-family: 'Helvetica', Arial, sans-serif;
+      }
+      a {
+        text-decoration: none;
+        color: red;
+      }
+      span{
+      	display: inline-block;
+      	background: gray;
+      }
+      ul{
+      	display:none;
+      }
+      li {
+        line-height: 1.5em;
+        margin-bottom: 20px;
+      }
+      .author, .date {
+        font-weight: bold;
+      }
+    </style>
+    <!-- Delete ".min" for console warnings in development -->
+    <script src="js/vue/vue.js"></script>
+   
+  </head>
+  <body>
+		<div id="uu">{{test}}</div> 
+		<div id="sbbd" v-bind:class="[cls]">
+			<input type="text" id="money" v-model="msg"/> 	
+			<h1 v-if="msg">{{msg}} ||</h1>
+		</div>	
+		<div id="bk">
+			<span> 博客</span>
+			<ul v-bind:class="[gg]">
+				<li>评论</li>
+				<li>未提醒</li>
+			</ul>
+		</div>
+  </body>
+   <script type="text/javascript">
+    	
+    	var date ={
+    		content:" addsaf碴哥百可历",
+    		text : "jjj"
+    	};
+    	
+    	var app3 = new Vue({
+    		el:"#bk",
+        	data: {
+        		gg : ''
+        	}
+    	});
+    
+    	
+    	var app1 = new Vue({
+        	el:"#sbbd",
+        	data: {
+        		msg : 'dd',
+        		cls : 'a'
+        	}
+        });
+    	
+    
+    		
+        var app = new Vue({
+        	el: '#uu',
+        	data: date
+        	,computed:{
+        		test:function(){return this.content+""+this.text;}
+        	}
+        });
+        
+        
+    </script>
+  </html>
