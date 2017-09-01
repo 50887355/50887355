@@ -2,5 +2,5 @@ package com.springdc;
 
 
 public abstract interface BaseService<T> {
-	public abstract ResultVO<T> query();
+	public abstract BeanResult<T> query();
 }

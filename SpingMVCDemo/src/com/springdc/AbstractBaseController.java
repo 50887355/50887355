@@ -16,7 +16,7 @@ public abstract class AbstractBaseController<T> {
 	
 	@ResponseBody
 	@RequestMapping("/page/helloworld")
-	public ResultVO<T> query(HttpServletRequest request){
+	public BeanResult<T> query(HttpServletRequest request){
 
 		return getBaseService().query();
 	}
