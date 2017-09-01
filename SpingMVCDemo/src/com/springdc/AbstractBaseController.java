@@ -12,6 +12,7 @@ public abstract class AbstractBaseController<T> {
 	@RequestMapping("/page/helloworld")
 	public String query(HttpServletRequest request){
 		ResultVO<T> rs =getBaseService().query();
+		System.out.println("");
 		request.setAttribute("result", rs.getResultlist());
 		return "index";
 	}
