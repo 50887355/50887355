@@ -3,10 +3,13 @@ package com.springmvc.service.impl;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.springframework.stereotype.Service;
+
 import com.springdc.BeanResult;
 import com.springmvc.User;
 import com.springmvc.service.IUserService;
 
+@Service("userService")
 public class UserServiceImpl implements IUserService{
 
 	@Override
@@ -18,6 +21,7 @@ public class UserServiceImpl implements IUserService{
 		s.setName("无敌了");
 		list.add(s);
 		rs.setResultlist(list);
+		System.out.println(s.getName());
 		return rs;
 	}
 

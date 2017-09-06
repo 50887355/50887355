@@ -14,7 +14,7 @@ import com.springmvc.User;
 public abstract class AbstractBaseController<T> {
 	
 	@ResponseBody
-	@RequestMapping("/helloWorld")
+	@RequestMapping("/list")
 	public BeanResult<T> query(){
 		System.out.println("OK");
 //	public BeanResult<T> query(PageParm pageparm,@RequestParam(value="searcharray", required=false) String searcharray){

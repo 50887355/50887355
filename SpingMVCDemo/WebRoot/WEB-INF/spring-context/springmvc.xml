@@ -7,8 +7,11 @@
         http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd">
 
 
-	<!-- 配置自动扫描的包 -->
-	<context:component-scan base-package="com.springmvc.*"></context:component-scan>
+	<!-- 配置自动扫描的包 注意base-package 里面没有.*-->
+	<context:component-scan base-package="com.springmvc">
+		<context:include-filter type="regex"
+			expression="..service.impl.*" />
+	</context:component-scan>
 
 	<!-- 配置视图解析器 如何把handler 方法返回值解析为实际的物理视图 -->
 	<bean
@@ -17,4 +20,48 @@
 		<property name="suffix" value=".jsp"></property>
 	</bean>
 
+<!-- 
+	<beans:bean id="conversionService"
+		class="org.springframework.format.support.FormattingConversionServiceFactoryBean">
+		<beans:property name="formatters">
+			<beans:bean
+				class="com.dawnpro.framework.common.convert.MaskFormatAnnotationFormatterFactory" />
+		</beans:property>
+	</beans:bean>
+	
+	<annotation-driven conversion-service="conversionService"
+		validator="validator" enableMatrixVariables="true">
+		<message-converters register-defaults="true">
+			<beans:bean class="com.springdc.UTFConverter" />
+		</message-converters>
+		//
+		<async-support default-timeout="3000"> 
+			<callable-interceptors>
+				<beans:bean class="org.springframework.samples.mvc.async.TimeoutCallableProcessingInterceptor"/> 
+			</callable-interceptors> 
+		</async-support> 
+		tomcat7.0 servlet3.0以后可以用webskote async特性
+		//
+	</annotation-driven>
+	
+ -->
+
+<!--spring3.1之前用法 springmvc 返回对象 需要用适配器解析 
+	<bean
+		class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter">
+		<property name="messageConverters">
+			<list>
+				<ref bean="mappingJacksonHttpMessageConverter" />
+			</list>
+		</property>
+	</bean>
+	<bean id="mappingJacksonHttpMessageConverter"
+		class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter">
+		<property name="supportedMediaTypes">
+			<list>
+				<value>text/html;charset=UTF-8</value>
+			</list>
+		</property>
+	</bean>
+-->
 </beans>

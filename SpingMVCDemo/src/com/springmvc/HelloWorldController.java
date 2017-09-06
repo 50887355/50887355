@@ -11,11 +11,10 @@ public class HelloWorldController {
 
         //@RequestMapping(method = RequestMethod.GET)
 		@RequestMapping("/helloWorld")
-		@ResponseBody
 		public String hello(ModelMap model) {
         	System.out.println("-------------");
             model.addAttribute("name", "Hello World!");
-            return "helloWorld";
+            return "index";
 
         }
 

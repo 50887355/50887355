@@ -2,8 +2,8 @@
     <wb-module deploy-name="SpingMVCDemo">
         <wb-resource deploy-path="/" source-path="/WebRoot" tag="defaultRootSource"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
-        <property name="context-root" value="/SpingMVCDemo"/>
         <property name="java-output-path" value="/SpingMVCDemo/WebRoot/WEB-INF/classes"/>
         <property name="me-merge-utility-modules" value="true"/>
+        <property name="context-root" value="/SpingMVCDemo"/>
     </wb-module>
 </project-modules>
