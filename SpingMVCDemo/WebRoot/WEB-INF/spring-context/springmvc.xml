@@ -46,7 +46,7 @@
 	
  -->
 
-<!--spring3.1之前用法 springmvc 返回对象 需要用适配器解析 
+<!--spring3.1之前用法 springmvc 返回对象 需要用适配器解析 -->
 	<bean
 		class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter">
 		<property name="messageConverters">
@@ -63,5 +63,5 @@
 			</list>
 		</property>
 	</bean>
--->
+
 </beans>

@@ -14,7 +14,7 @@ public class HelloWorldController {
 		public String hello(ModelMap model) {
         	System.out.println("-------------");
             model.addAttribute("name", "Hello World!");
-            return "index";
+            return "inter";
 
         }
 

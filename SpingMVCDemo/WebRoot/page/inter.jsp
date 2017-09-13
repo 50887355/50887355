@@ -22,8 +22,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
    <script src="<%=basePath%>js/vue/vue-resource.js"></script>
 
   <body>
-   过来了 <br>
-   <a href="page/helloworld">hello world</a>
+   过来了 显示值 <br>
    	<div id="app">
 			<div class="container">
 				<simple-grid :data-list="gridData" :columns="gridColumns">
@@ -59,7 +58,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				
 		</script>
 		<script>
-		
+		alert(0);
 		Vue.http.post(<%=basePath%>+'user/list').then(function(response){
 		    // 响应成功回调
 		    console.log(response);
@@ -68,7 +67,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			  alert(response);
 		});
 		
-		
+		alert(1);
 		</script>
   </body>
 </html>

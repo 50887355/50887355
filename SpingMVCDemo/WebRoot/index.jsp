@@ -18,12 +18,12 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<link rel="stylesheet" type="text/css" href="styles.css">
 	-->
   </head>
-   <script src="../../js/vue/vue.js"></script>
-   <script src="../../js/vue/vue-resource.js"></script>
+   <script src="<%=path %>/js/vue/vue.js"></script>
+   <script src="<%=path %>/js/vue/vue-resource.js"></script>
 
   <body>
-   adfasd <br>
-   <a href="page/helloworld">hello world</a>
+   adfasd 1<br>
+   <a href="<%=path %>/helloWorld">hello world</a>
    <div id="app"></div>
    
        <script type="text/javascript">
