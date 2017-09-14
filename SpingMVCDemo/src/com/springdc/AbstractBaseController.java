@@ -21,5 +21,13 @@ public abstract class AbstractBaseController<T> {
 		return getBaseService().query();
 	}
 	
+	@ResponseBody
+	@RequestMapping("/query")
+	public String queryString(){
+		System.out.println("OK");
+//	public BeanResult<T> query(PageParm pageparm,@RequestParam(value="searcharray", required=false) String searcharray){
+		return getBaseService().queryString();
+	}
+	
 	protected abstract  BaseService<T> getBaseService();
 }

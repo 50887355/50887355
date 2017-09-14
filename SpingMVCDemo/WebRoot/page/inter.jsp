@@ -59,7 +59,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		</script>
 		<script>
 		alert(0);
-		Vue.http.post(<%=basePath%>+'user/list'，null).then(function(response){
+		Vue.http.post(<%=basePath%>+'user/query').then(function(response){
 		    // 响应成功回调
 		    console.log(response);
 		}, function(response){

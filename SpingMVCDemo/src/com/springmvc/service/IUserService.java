@@ -6,4 +6,6 @@ import com.springmvc.User;
 
 public interface IUserService extends BaseService<User>{
 	public BeanResult<User> query();
+	
+	public String  queryString();
 }
