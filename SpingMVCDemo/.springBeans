@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beansProjectDescription>
+	<version>1</version>
+	<pluginVersion><![CDATA[3.7.0.201506251244-RELEASE]]></pluginVersion>
+	<configSuffixes>
+		<configSuffix><![CDATA[xml]]></configSuffix>
+	</configSuffixes>
+	<enableImports><![CDATA[false]]></enableImports>
+	<configs>
+		<config>WebRoot/WEB-INF/spring-context/spring-mvc.xml</config>
+	</configs>
+	<autoconfigs>
+		<config>WebRoot/WEB-INF/spring-context/spring-service.xml</config>
+		<config>WebRoot/WEB-INF/spring-context/spring-dao.xml</config>
+	</autoconfigs>
+	<configSets>
+	</configSets>
+</beansProjectDescription>
