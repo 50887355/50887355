@@ -24,6 +24,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   <body>
    adfasd 1<br>
    <a href="<%=path %>/helloWorld">hello world</a>
+   <br>
+    <a href="<%=path %>/seckill/list">seckill</a> 
    <div id="app"></div>
      <!-- 
     	var  web = new Vue({
